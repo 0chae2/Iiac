@@ -11,9 +11,9 @@ tion requirements for domestic robots. Safety Science, 50 (9), 1888â€“1897 . : í
    
    
   2. Social mapping
-      2-1. Metric maps and navigation
-      2-2. Human detection
-      2-3. Action recognition
+      2-1) Metric maps and navigation
+      2-2) Human detection
+      2-3) Action recognition
     
     
     
