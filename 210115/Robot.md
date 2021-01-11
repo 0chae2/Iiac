@@ -9,16 +9,25 @@ tion requirements for domestic robots. Safety Science, 50 (9), 1888–1897 . : �
    - Argyle, M. , & Dean, J. (1965). Eye-contact, distance and affiliation. Sociometry , 289–304
    
 #### 2. Social mapping
-(1) Metric maps and navigation
-(2) Human detection
-(3) Action recognition
+      - social mapping framework within an existing robot navigationsystems.
+        1) The computation of the metric map of the surroundings offline fashion
+        2) The detection of humans within the scene 
+        3) the recognition of the actions performed by individuals during the operational phase
+      - metric map 구축이 증가하고 있다. 따라서 정적 장애물을 모델링하고 생성된 맵은 나중에 robot navigation and localization에 활용될 것이다.
+      - robot navigation 은 이전에 구성된 지도를 사용
+      
+##### (1) Metric maps and navigation
+
+
+##### (2) Human detection
+##### (3) Action recognition
     
     
     
-  3. Robot navigation in human populated environments
-    3-1. planning
-    3-2. Socially constrained replanning
-    3-3. System integration
+#### 3. Robot navigation in human populated environments
+##### (1) planning
+##### (2) Socially constrained replanning
+##### (3) System integration
     
     
     
