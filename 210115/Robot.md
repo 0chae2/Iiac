@@ -1,19 +1,17 @@
    
 ### [Robot navigation in large-scale social maps: An action recognition approach :: Konstantinos Charalampous](https://www.sciencedirect.com/science/article/pii/S0957417416305103)
-  1. Introduction
-  (1) 인간과 협동하는 로봇에 대한 얘기 인듯 
+####  1. Introduction
+#####  (1) 인간과 협동하는 로봇에 대한 얘기 인듯 
   - Mitka, E. , Gasteratos, A. , Kyriakoulis, N. , & Mouroutsos, S. G. (2012). Safety certifica-
 tion requirements for domestic robots. Safety Science, 50 (9), 1888–1897 . : 협동로봇 안전측정?
    - Hall, E. T. (1969). The hidden dimension : 1990. Anchor Books New York . : 활동 존...?
    - Argyle, M. (2013). Bodily communication . Routledge .
    - Argyle, M. , & Dean, J. (1965). Eye-contact, distance and affiliation. Sociometry , 289–304
    
-   
-   
-  2. Social mapping
-      2-1) Metric maps and navigation
-      2-2) Human detection
-      2-3) Action recognition
+#### 2. Social mapping
+(1) Metric maps and navigation
+(2) Human detection
+(3) Action recognition
     
     
     
