@@ -1,7 +1,7 @@
-1. Semantic mapping for mobile robotics tasks: A survey :: Ioannis Kostavelis
+## Semantic mapping for mobile robotics tasks: A survey :: Ioannis Kostavelis
 
 
-2. Recent trends in social aware robot navigation: A survey :: Konstantinos Charalampous (2017)
+## Recent trends in social aware robot navigation: A survey :: Konstantinos Charalampous (2017)
   1) Introduction
   - 로봇의 자율적인 운행을 가능하게 한 SLAM : 사람의 자연적 지각과는 좀 다
   
