@@ -32,7 +32,7 @@
    6) Motivation for future work 
    7) Coda 
    
-### [Robot navigation in large-scale social maps: An action recognition approach :: Konstantinos Charalampous](210115/Robot navigation in large)
+### [Robot navigation in large-scale social maps: An action recognition approach :: Konstantinos Charalampous](https://github.com/0chae2/reference/210115/Robot navigation in large)
   1. Introduction
   2. Social mapping
     2-1. Metric maps and navigation
