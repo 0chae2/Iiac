@@ -1,7 +1,10 @@
    
 ### [Robot navigation in large-scale social maps: An action recognition approach :: Konstantinos Charalampous](https://www.sciencedirect.com/science/article/pii/S0957417416305103)
+```
+ 로봇과 사람이 공간을 공유하고 그 작업공간에 사람과의 활동을 조화롭게 할 수 있도록 만드는 로봇을 제작하는 것이 목표이다. 우리는 사람이 있는 환경에서 로봇이 안전한 작업궤도를 만들 수 있다는 것을 증명하였다. 
+```
 ####  1. Introduction
-#####  (1) 인간과 협동하는 로봇에 대한 얘기 인듯 
+#####  (1) 인간과 협동하는 로봇에 
   - Mitka, E. , Gasteratos, A. , Kyriakoulis, N. , & Mouroutsos, S. G. (2012). Safety certifica-
 tion requirements for domestic robots. Safety Science, 50 (9), 1888–1897 . : 협동로봇 안전측정?
    - Hall, E. T. (1969). The hidden dimension : 1990. Anchor Books New York . : 활동 존...?
@@ -21,6 +24,9 @@ tion requirements for domestic robots. Safety Science, 50 (9), 1888–1897 . : �
          - 소셜 맵을 구축하기위한 첫 번째 단계는 로봇이 관리하는 동안 로봇의 환경을 정확하게 모델링하는 것이므로 메트릭 맵이 직접 요구됩니다. 미터법지도의 구성은이 백서의 목표를 벗어 났지만,이 논문은 여기에 거주자와 내비게이션 간의 차이점을 강조하는 채택 된 방법에 대한 세부 정보를 제공하고, 무인 환경을 제오갛ㅂ니다. 
          - RGB-D bashed > 3D metric map 환경을 만드는 것에 따르면 by Learning spatially semantic representations for cognitive robot navigation:: Kostavelis & Gasteratos
          1) SIFT feature detect
+         2) 획득한 각각의 point cloud 값을 3D 점에 일치시킵니다.
+            강체를 point clouds로 전환 시키기 위하여 SVD와 최적화 문제를 해결합니다. point cloud에서 RANSAC 알고리즘을 사용하여 우세한 평면을 감지하고 반복적으로 ICP를 통해 이를 등록함으로 로봇모션을 대략적으로 추정한 것이다.??
+         로봇
 
 ##### (2) Human detection
 ##### (3) Action recognition
@@ -61,8 +67,13 @@ tion requirements for domestic robots. Safety Science, 50 (9), 1888–1897 . : �
  - 모션 추정
  
  ##### [RANSAC_random sample consensus](https://darkpgmr.tistory.com/61?category=460965)
+ [video](https://www.youtube.com/watch?v=Cu1f6vpEilg)
  - 포물선을 근사시키는?
  - 최소자승법은 residual^2을 최소화하도록 모델을 찾지만 RANSAC은 컨센서스가 최대인, 즉 가장 많은 수의 데이터들로부터 지지를 받는 모델을 선택하는 방법 > 무엇을 기준으로 모델의 파라미터를 찾는가의 차이임
+ 
+ 
+ ##### [SVD](https://darkpgmr.tistory.com/106)
+ ##### [ICP(interative closest point)](https://www.youtube.com/watch?v=djnd502836w)
  
  
  
