@@ -6,17 +6,14 @@
 ```
 ####  1. Introduction
 ####  2. Social mapping
-#####  2-1. Metric maps and navigation
-#####  2-2. Human detection
-#####  2-3. Action recognition
-
+   #####  2-1. Metric maps and navigation
+   #####  2-2. Human detection
+   #####  2-3. Action recognition
 ####  3. Robot navigation in human populated environments
-#####  3-1. planning
-#####  3-2. Socially constrained replanning
-#####  3-3. System integration
-
+   #####  3-1. planning
+   #####  3-2. Socially constrained replanning
+   #####  3-3. System integration
 ####  4. Experimental evaluation
-
 ####  5. Conclusions
 
 
@@ -58,8 +55,8 @@ Svenstrup, Bak 및 Andersen (2010)에서 위치와 인간의 움직임은 잠재
 수행중인 조치를 고려하여 수용 가능한 행동 개인. 이 방법은 실내 영역을보다 정확하게 과도하게 혼잡하지 않고 사람이 보통 2 ~ 3 명씩 모이는 작업 환경. 매핑 부분에 관한 한, 로봇은 미리 계산 된 3D 메트릭 맵을 불러와 알려진 환경에서 탐색합니다. 이전 작업에서 설명한 방법에 따라 빌드되었습니다. (Kostavelis & Gasteratos, 2013). 메트릭 맵은 실내 환경에서 로봇을 수동으로 운전하는 오프라인 방식으로 토폴로지 그래프로 구성됩니다. 그만큼 이 그래프의 노드는 로봇이 작동 할 때 재귀적으로 트리거됩니다. 레이블이 지정된 한 장소에서 다른 장소로 향했습니다. 
 3D 메트릭 맵의 관련 부분. 인간 탐지 체계 RGB 정보를 기반으로 지속적으로 실행되고 유효한 결과를 반환하면 동작 인식 루틴이 시작됩니다. 로봇이 신속하게 대응하기 위해서는 인간 감지가 실시간으로 피드백을 제공합니다. 여기에 사용 된 것 (Dollár, Be'longie, & Perona, 2010)은 다른 최첨단 방법의 정확성을 유지하면서 이러한 문제에 대한 가장 빠른 해결책으로 입증되었습니다. 깊이 정보는 로봇의 정확한 위치를 파악하기 위해 로봇의 위치와 함께 사용됩니다. 지도에서 개인. 인식 된 동작에 따라 로봇은 근접 규칙에 따라 궤도를 수정하여 사회적 인식을 나타낼 수 있습니다. 채택 된 동작 인식 모듈은 딥 러닝 모듈이며 HTM (Hierarchical Temporal Memory) 개념을 따릅니다. 우리가 아는 한 이것은 사람들이 수행하는 행동에 의존하는 소셜 매핑을위한 첫 번째 작업입니다. 마지막으로, 도입 된 프레임 워크의 각 개별 구성 요소가 각 출판물에서 철저하게 평가되고 테스트되었음을 주목할 가치가 있습니다. 제안 된 작업의 통합과 관련하여 거주 환경에서 각각의 로봇 시스템을 사용하여 평가됩니다. 데이터 세트에서 평가되거나 각 소셜 매핑 모듈을 명시 적으로 테스트하는 대부분의 게시 된 작업과는 달리 나머지 로봇 운영 모듈의 소셜 매핑 기능. 이 작업에서 로봇은 목표를 제공받습니다. 위치를 파악하고 핵심 요소를 원활하게 조정하여 순항합니다. 목표 위치에 도달하는 동시에 모듈 
 사회적으로 수용 가능한 반응을 보인다. 논문의 나머지 부분은 다음과 같이 구성됩니다. 섹션 2에서는 제안 된 시스템의 모듈과이를 추출하기 위해 활용되는 방식을 설명합니다. 
-   ```
- ``` 
+```
+
 #### 2. Social mapping
       - social mapping framework within an existing robot navigationsystems.
         1) The computation of the metric map of the surroundings offline fashion : 오프라인 지도 만들기?
@@ -104,8 +101,41 @@ Svenstrup, Bak 및 Andersen (2010)에서 위치와 인간의 움직임은 잠재
   - [RRT는 샘플링 기반 경로계획법](https://blog.naver.com/pasus/221982416404)
   - [RRT*](https://blog.naver.com/pasus/221985468898)
   - [video](https://www.youtube.com/watch?v=Ao7p_xiUu4s)
-#### Dynamic Time Warping (DTW) module
 
+#### [DTW](https://medium.com/@Aaron__Kim/dynamic-time-warping-%EB%8F%99%EC%A0%81-%EC%8B%9C%EA%B0%84-%EC%9B%8C%ED%95%91-ac80777f49a)
+   - 시계열 데이터 간 비교를 위한 최적의 index 매칭을 추정하는 알고리즘 
+```python
+from scipy.spatial.distance import euclidean
+A = [1, 3, 5, 7, 6, 8, 9, 10, 8, 7]
+B = [1, 2, 6, 5, 7, 8]
+print("distance: ", euclidean(A[:len(B)], B))
+#distance : 2.64 
+# euclidean distance
+# p = (p1,p2,,,,p_n), q = (q1,q2,,,,q_n)
+# ||p-q|| = sqrt((p-q)*(p-q)) = sqrt(|p|^2+|q|^2-2p*q)
+#=======================================================#
+!pip install fastdtw 
+#https://pypi.org/project/fastdtw/#id2
+# FastDTW
+from fastdtw import fastdtw
+path = fastdtw(A, B)[1]
+B_ = []
+for i in range(len(A)):
+    B_.append(A[path[i][1]])
+print("distance: ", euclidean(A, B_))
+# distance : 3.1622,,.
+#=======================================================#
+import numpy as np
+from scipy.spatial.distance import euclidean
+
+from fastdtw import fastdtw
+
+x = np.array([[1,1], [2,2], [3,3], [4,4], [5,5]])
+y = np.array([[2,2], [3,3], [4,4]])
+distance, path = fastdtw(x, y, dist=euclidean)
+print(distance)
+## 2.828327,...
+```
 #### [Cognitive Adaptive Optimization (CAO)](https://medium.com/@Aaron__Kim/dynamic-time-warping-%EB%8F%99%EC%A0%81-%EC%8B%9C%EA%B0%84-%EC%9B%8C%ED%95%91-ac80777f49a)
 - human-robot interaction(HRI)
 - Dynamic Bayesian Network (DBN)
