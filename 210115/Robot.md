@@ -18,7 +18,7 @@
 5. [Conclusions](#conclusions)
 
 ------------------------------------------------------------------------------------------------------------------------------
-####  1. Introduction
+### Introduction
 - [Rapidly-exploring Random Tree (RRT) algorithm](#RRT)
 - [Dynamic Time Warping (DTW) module](#DTW)
 - [Cognitive Adaptive Optimization (CAO)](#CAO)
@@ -41,7 +41,7 @@ tion requirements for domestic robots. Safety Science, 50 (9), 1888–1897 . : �
    Section 4. 시스템 평가
 ```
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
-#### 2. Social mapping
+### Social mapping
       - social mapping framework within an existing robot navigationsystems.
         1) The computation of the metric map of the surroundings offline fashion : 오프라인 지도 만들기?
         2) The detection of humans within the scene : 현장내 인간 감지
@@ -63,19 +63,19 @@ tion requirements for domestic robots. Safety Science, 50 (9), 1888–1897 . : �
     
     
     
-#### 3. Robot navigation in human populated environments
-##### (1) planning
-##### (2) Socially constrained replanning
-##### (3) System integration
+### Robot navigation in human populated environments
+#### (1) planning
+#### (2) Socially constrained replanning
+#### (3) System integration
     
     
     
     
-#### 4. Experimental evaluation
+### Experimental evaluation
   
   
   
-#### 5. Conclusions
+### Conclusions
   
   
   
