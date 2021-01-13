@@ -6,7 +6,7 @@
 ```
 ## 목차
 1. [Introduction](#Introduction)
-2. [Social mapping](#Social mapping)
+2. [Social mapping](#Social-mapping)
     2-1. Metric maps and navigation
     2-2. Human detection
     2-3. Action recognition
@@ -35,8 +35,11 @@ tion requirements for domestic robots. Safety Science, 50 (9), 1888–1897 . : �
    - Argyle, M. , & Dean, J. (1965). Eye-contact, distance and affiliation. Sociometry , 289–304
 
 - 이 페이퍼에서는 소셜매핑기능과 로봇의 나머지 작동을 분리하는 대부분의 연구와는 달리 제안된 작업의 통합과 관련하여 연구한다. 본 연구에서는 로봇의 목표위치에 도달하는 동시에 사회적 상호작용을 하며 이동하는 것을 목표로 한다.
-- Section 2. 제안된 시스템의 모듈과 맵을 추출하는 방법에 대한 설명
-- Section 3. 
+```
+   Section 2. 제안된 시스템의 모듈과 맵을 추출하는 방법에 대한 설명
+   Section 3. 로봇탐색 메커니즘과 구성요소를 잘 연결하는 방식 설명
+   Section 4. 시스템 평가
+```
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #### 2. Social mapping
       - social mapping framework within an existing robot navigationsystems.
@@ -68,11 +71,11 @@ tion requirements for domestic robots. Safety Science, 50 (9), 1888–1897 . : �
     
     
     
-  4. Experimental evaluation
+#### 4. Experimental evaluation
   
   
   
-  5. Conclusions
+#### 5. Conclusions
   
   
   
@@ -134,8 +137,10 @@ distance, path = fastdtw(x, y, dist=euclidean)
 print(distance)
 ## 2.828327,...
 ```
-#### [Cognitive Adaptive Optimization (CAO)](https://medium.com/@Aaron__Kim/dynamic-time-warping-%EB%8F%99%EC%A0%81-%EC%8B%9C%EA%B0%84-%EC%9B%8C%ED%95%91-ac80777f49a)
-- human-robot interaction(HRI)
+#### [CAO](https://medium.com/@Aaron__Kim/dynamic-time-warping-%EB%8F%99%EC%A0%81-%EC%8B%9C%EA%B0%84-%EC%9B%8C%ED%95%91-ac80777f49a)
+- Cognitive Adaptive Optimization
+#### [HRI]
+- human-robot interaction
 - Dynamic Bayesian Network (DBN)
 - Extended Social Force Model(ESFM)
 - Markov Chain Monte Carlo (MCMC)
@@ -252,7 +257,7 @@ print(distance)
   - [다크프로그래머](https://darkpgmr.tistory.com)
   - [멈춘보다 천천히라도](https://webnautes.tistory.com/)
   - [OpenCV Tutorial](https://pysource.com/2018/03/16/image-pyramids-blending-and-reconstruction-opencv-3-4-with-python-3-tutorial-24/)
- 
+  - [Markdown문법](https://velog.io/@yuuuye/velog-%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4MarkDown-%EC%9E%91%EC%84%B1%EB%B2%95)
  
  ```
    인간이 거주하는 환경에 로봇 통합 그들이 할 수있는 방법론의 확립을 강요 사람들 사이에서 안전하고 적절하며 정상적인 방법으로 순항합니다. 이것은 안전한 항해의 개념에 대한 더 넓은 해석을 얻기위한 연구 측면에서 새로운 도전을 제기합니다. 확립 된 안전을 넘어 인간-로봇 공존 촉진 측정(Mitka, Gasteratos, Kyriakoulis, & Mouroutsos, 2012). 의 위에 모바일 로봇 공학, 매핑은 로봇에게 의미가 있습니다. 모바일 로봇 공학에서 매핑은 로봇이 주변에 대한 의미있는 설명을 구성하여 높은 수준의 목표를 달성 할 수있는 능력을 부여합니다. 새로운 주제 소셜 매핑은 인간의 존재와 활동이 알려지지 않은 복잡한 환경에서 로봇의 기동을 다룹니다. 로봇은 적절한 방식으로 모델링해야합니다. 운영 행동을 인간의 가산 성과 연관시키고 따라서 개인의 편의를 고려하여 탐색 전략을 조정하십시오. 따라서 공간 관리는 인간과 상호 작용할 때의 반응은 이해하고 모델링 할 수 있습니다. 상당한 연구가 공식화하기 위해 사회 과학 분야에서 수행 개인의 행동과 공간에서의 위치가 상호 작용의 질에 미치는 영향을 추정합니다. 문화 인류 학자 에드워드 T. Hall은 proxemics (Hall, 1969)라는 용어를 만들어 문화에 의해 형성되는 생리적 영향이 구역을 지정 함을 제안합니다. 
