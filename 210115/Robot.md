@@ -5,15 +5,15 @@
  우리는 사람이 있는 환경에서 로봇이 안전한 작업궤도를 만들 수 있다는 것을 증명하였다. 
 ```
 ## 목차
-1. [Introduction](#Introduction)
-2. [Social mapping](#Social-mapping)
-    2-1. Metric maps and navigation
-    2-2. Human detection
-    2-3. Action recognition
+1. [Introduction](#1.-Introduction)
+2. [Social mapping](#2.-Social-mapping)
+    - Metric maps and navigation
+    - Human detection
+    - Action recognition
 3. [Robot navigation in human populated environments](Robot-navigation-in-human-populated-environments)
-    3-1. planning
-    3-2. Socially constrained replanning
-    3-3. System integration
+    - planning
+    - Socially constrained replanning
+    - System integration
 4. [Experimental evaluation](#Experimental-evaluation)
 5. [Conclusions](#Conclusions)
 
