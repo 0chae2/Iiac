@@ -5,8 +5,8 @@
  우리는 사람이 있는 환경에서 로봇이 안전한 작업궤도를 만들 수 있다는 것을 증명하였다. 
 ```
 ## 목차
-1. [Introduction](#1.introduction)
-2. [Social mapping](#2.social-mapping)
+1. [Introduction](#introduction)
+2. [Social mapping](#social-mapping)
     - Metric maps and navigation
     - Human detection
     - Action recognition
