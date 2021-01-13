@@ -5,7 +5,7 @@
  우리는 사람이 있는 환경에서 로봇이 안전한 작업궤도를 만들 수 있다는 것을 증명하였다. 
 ```
 ####  1. Introduction
-- [Rapidly-exploring Random Tree (RRT) algorithm](#Rapidly-exploring-Random-Tree-(RRT)-algorithm)
+- [Rapidly-exploring Random Tree (RRT) algorithm](#RRT)
   - [RRT는 샘플링 기반 경로계획법](https://blog.naver.com/pasus/221982416404)
   - [RRT*](https://blog.naver.com/pasus/221985468898)
   - [video](https://www.youtube.com/watch?v=Ao7p_xiUu4s)
@@ -88,7 +88,7 @@ Svenstrup, Bak 및 Andersen (2010)에서 위치와 인간의 움직임은 잠재
   
   
   -------------------------------------------------------------------------------------------------
-#### [Rapidly-exploring Random Tree (RRT) algorithm](https://en.wikipedia.org/wiki/Rapidly-exploring_random_tree)
+#### [RRT](https://en.wikipedia.org/wiki/Rapidly-exploring_random_tree)
   - [RRT는 샘플링 기반 경로계획법](https://blog.naver.com/pasus/221982416404)
   - [RRT*](https://blog.naver.com/pasus/221985468898)
   - [video](https://www.youtube.com/watch?v=Ao7p_xiUu4s)
