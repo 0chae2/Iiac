@@ -5,17 +5,17 @@
  우리는 사람이 있는 환경에서 로봇이 안전한 작업궤도를 만들 수 있다는 것을 증명하였다. 
 ```
 ## 목차
-1. [Introduction](#1.Introduction)
-2. [Social mapping](#2.Social-mapping)
+1. [Introduction](#1.introduction)
+2. [Social mapping](#2.social-mapping)
     - Metric maps and navigation
     - Human detection
     - Action recognition
-3. [Robot navigation in human populated environments](Robot-navigation-in-human-populated-environments)
+3. [Robot navigation in human populated environments](#robot-navigation-in-human-populated-environments)
     - planning
     - Socially constrained replanning
     - System integration
-4. [Experimental evaluation](#Experimental-evaluation)
-5. [Conclusions](#Conclusions)
+4. [Experimental evaluation](#experimental-evaluation)
+5. [Conclusions](#conclusions)
 
 ------------------------------------------------------------------------------------------------------------------------------
 ####  1. Introduction
@@ -258,7 +258,7 @@ print(distance)
   - [멈춘보다 천천히라도](https://webnautes.tistory.com/)
   - [OpenCV Tutorial](https://pysource.com/2018/03/16/image-pyramids-blending-and-reconstruction-opencv-3-4-with-python-3-tutorial-24/)
   - [Markdown문법](https://velog.io/@yuuuye/velog-%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4MarkDown-%EC%9E%91%EC%84%B1%EB%B2%95)
- 
+  - [Markdown문법2](https://steemit.com/kr/@nand/markdown)
  ```
    인간이 거주하는 환경에 로봇 통합 그들이 할 수있는 방법론의 확립을 강요 사람들 사이에서 안전하고 적절하며 정상적인 방법으로 순항합니다. 이것은 안전한 항해의 개념에 대한 더 넓은 해석을 얻기위한 연구 측면에서 새로운 도전을 제기합니다. 확립 된 안전을 넘어 인간-로봇 공존 촉진 측정(Mitka, Gasteratos, Kyriakoulis, & Mouroutsos, 2012). 의 위에 모바일 로봇 공학, 매핑은 로봇에게 의미가 있습니다. 모바일 로봇 공학에서 매핑은 로봇이 주변에 대한 의미있는 설명을 구성하여 높은 수준의 목표를 달성 할 수있는 능력을 부여합니다. 새로운 주제 소셜 매핑은 인간의 존재와 활동이 알려지지 않은 복잡한 환경에서 로봇의 기동을 다룹니다. 로봇은 적절한 방식으로 모델링해야합니다. 운영 행동을 인간의 가산 성과 연관시키고 따라서 개인의 편의를 고려하여 탐색 전략을 조정하십시오. 따라서 공간 관리는 인간과 상호 작용할 때의 반응은 이해하고 모델링 할 수 있습니다. 상당한 연구가 공식화하기 위해 사회 과학 분야에서 수행 개인의 행동과 공간에서의 위치가 상호 작용의 질에 미치는 영향을 추정합니다. 문화 인류 학자 에드워드 T. Hall은 proxemics (Hall, 1969)라는 용어를 만들어 문화에 의해 형성되는 생리적 영향이 구역을 지정 함을 제안합니다. 
 근접 거리의.이 작업의 대부분은 Argyle (2013)에 요약되어 있으며 친밀 성 평형 모델 (Argyle Dean, 1965), 근접 행동과 상호 시선 사이의 상호 작용을 설명합니다. 요컨대, 그들이 접근했을 때 과도하게 가까운 사람들은 본능적으로 덜 편안한 자세를 취합니다. 또한 개인은 일상적인 대화를 수행 할 수있는 특정 공간을 주장하며 참가자 만 액세스 할 수 있습니다. 이 공간은 다른 사람들이 높이 평가하지만 위반은 불편 함을 유발한다 (Hall, 1969). 근접 이론에 따르면, 사람 주변의 영역은 네 가지 기본 영역, 즉 친밀한 영역, 개인 영역, 사회적 영역, 공개 된 것. 첫 번째 영역은 반경 0.45m의 원반이며 속삭임과 같은 신체 접촉과 관련된 동작에 해당합니다. 두 번째는 내부 및 외부 반경이 0.45 인 원형 링입니다. 및 1.2m, 각각 친척과의 상호 작용 또는 혼잡 한 상황에서뿐만 아니라 친구. 세 번째 원형 구역 반경이 [1.2-3.5] m 범위 인 경우 거리를 예를 들어 쇼핑이나 박물관에서 공공. 마지막 영역 반경이 3.5m 이상이면 상호 작용이 없음을 나타냅니다. 다카야마와 판토 파루 (2009)의 작업을 바탕으로 모바일 로봇과 인간 사이에 동일한 근접 행동이 적용된다고 가정합니다. 따라서 소셜 매핑은 로봇의 소셜 인텔리전스 구현을 연구합니다. 
