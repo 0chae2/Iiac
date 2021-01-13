@@ -185,7 +185,7 @@ print(distance)
    [출처](https://cholol.tistory.com/97)
    [https://lans.tistory.com/1062)
  
- 
+ ##### [SIFT](https://ballentain.tistory.com/47)
  
  
   
@@ -248,4 +248,11 @@ print(distance)
   recognition
   
   ```
+  
+  ### 자주가는 링크
+  - [텐진대 컴퓨터비전](https://bskyvision.com)
+  - [장형기님 git](https://changh95.github.io/)
+  - [다크프로그래머](https://darkpgmr.tistory.com)
+  - [멈춘보다 천천히라도](https://webnautes.tistory.com/)
+  
  
