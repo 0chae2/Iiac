@@ -5,18 +5,16 @@
  우리는 사람이 있는 환경에서 로봇이 안전한 작업궤도를 만들 수 있다는 것을 증명하였다. 
 ```
 ####  1. Introduction
-- [Rapidly-exploring Random Tree (RRT) algorithm](#RRT)
-  - [RRT는 샘플링 기반 경로계획법](https://blog.naver.com/pasus/221982416404)
-  - [RRT*](https://blog.naver.com/pasus/221985468898)
-  - [video](https://www.youtube.com/watch?v=Ao7p_xiUu4s)
-- Dynamic Time Warping (DTW) module
 
-- [Cognitive Adaptive Optimization (CAO)](https://medium.com/@Aaron__Kim/dynamic-time-warping-%EB%8F%99%EC%A0%81-%EC%8B%9C%EA%B0%84-%EC%9B%8C%ED%95%91-ac80777f49a)
-- human-robot interaction(HRI)
-- Dynamic Bayesian Network (DBN)
-- Extended Social Force Model(ESFM)
-- Markov Chain Monte Carlo (MCMC)
-- Hierarchical Temporal Memory (HTM)
+####  1. Introduction
+- [Rapidly-exploring Random Tree (RRT) algorithm](#RRT)
+- [Dynamic Time Warping (DTW) module](#DTW)
+- [Cognitive Adaptive Optimization (CAO)](#CAO)
+- [human-robot interaction(HRI)](#HRI)
+- [Dynamic Bayesian Network (DBN)](#DBN)
+- [Extended Social Force Model(ESFM)](#ESFM)
+- [Markov Chain Monte Carlo (MCMC)](#MCMC)
+- [Hierarchical Temporal Memory (HTM)](#HTM)
 
   - Mitka, E. , Gasteratos, A. , Kyriakoulis, N. , & Mouroutsos, S. G. (2012). Safety certifica-
 tion requirements for domestic robots. Safety Science, 50 (9), 1888–1897 . : 협동로봇 안전측정?
