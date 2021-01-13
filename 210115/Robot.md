@@ -10,7 +10,8 @@
   - [RRT*](https://blog.naver.com/pasus/221985468898)
   - [video](https://www.youtube.com/watch?v=Ao7p_xiUu4s)
 - Dynamic Time Warping (DTW) module
-- Cognitive Adaptive Optimization (CAO)
+
+- [Cognitive Adaptive Optimization (CAO)](https://medium.com/@Aaron__Kim/dynamic-time-warping-%EB%8F%99%EC%A0%81-%EC%8B%9C%EA%B0%84-%EC%9B%8C%ED%95%91-ac80777f49a)
 - human-robot interaction(HRI)
 - Dynamic Bayesian Network (DBN)
 - Extended Social Force Model(ESFM)
