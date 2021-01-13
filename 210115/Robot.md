@@ -6,7 +6,7 @@
 ```
 ####  1. Introduction
 ####  2. Social mapping
-      2-1. Metric maps and navigation
+#####    2-1. Metric maps and navigation
       2-2. Human detection
       2-3. Action recognition
 ####  3. Robot navigation in human populated environments
