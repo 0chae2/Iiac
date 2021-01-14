@@ -66,6 +66,8 @@ tion requirements for domestic robots. Safety Science, 50 (9), 1888–1897 . : �
 ![Dollar 2012 Pedestrian detection: an evaluation of the state of the art](https://github.com/0chae2/reference/blob/master/210115/dollar12.png)(reference)
 
 ##### (3) Action recognition
+- [space time feature detectors and descriptors](https://hal.inria.fr/inria-00439769)
+
  
 -------------------------------------
     
@@ -222,6 +224,18 @@ print(distance)
     - 스케일이 크다는 것 : 어떤 사물을 넓은 시야에서 본다
        ex) 이미지 피라미드에서 축소된 이미지들은 원본 이미지에 비해 스케일이 크다!
            즉, 이미지 축소 --> scale 반비례로 큰 값을 가짐 (축소 : 숲, 확대: 나뭇잎)
+           
+ 
+ 
+ #### [A* algolithm](https://medium.com/@dev.kimji1/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-a-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-f373683f168a)
+ - [그래프 탐색 알고리즘](https://ko.wikipedia.org/wiki/A*_%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98)
+ - [다익스트라 알고리즘](https://namu.wiki/w/%EB%8B%A4%EC%9D%B5%EC%8A%A4%ED%8A%B8%EB%9D%BC%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98)을 확장하여 만들어진 출발 꼭짓점에서부터 목표 꼭짓점까지 가는 최단 경로를 찾아내는 그래프 경로 탐색알고리즘 중 하나이다.
+ - heuristics 추정 값의 순서로 꼭짓점 방문 
+ - [다른 알고리즘과 차이점](https://deliorange.tistory.com/110)
+   1) BFS(Breadth First search) : 완적 탐색 알고리즘, 우선 순위 없이 모든 노드를 탐색
+   2) 다익스트라 : 일반적인 최단거리 알고리즘, 한 노드를 기준으로 모든 노드의 최단 경로를 찾기 때문에 시간 비용이 많이 듬
+   3) 플로이드 : 모든 노드의 최단경로를 찾는 알고리즘, 일반적인 시간 복잡도 O(N^3)
+ - [A*](https://namu.wiki/w/A*%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98)를 사용하는 이유는 다익스트라의 현실 적용이 매우 어렵기 때문이다. 당장에 네트워크 같은 디지털적인 공간이 아닌, 현실의, 사람이 사는 공간을 생각해보자. 사람이 다닐 수 있는 "거리"는 명백히 아날로그하다. 이것들을 전부 노드화시키기에는 그 수가 엄청나게 많아질 수 있다. 그렇다면 탐색해야 하는 공간도 그만큼 커지게 되고, 시간 복잡도 역시 아득히 커질 것이다. 또한 어찌어찌 잘 노드화시켜서 다익스트라를 사용할 수 있는 상황을 만들어서 경로를 발견했다고 치자. 그렇게 탐색한 경로가 자동차 정체 구간, 출근길 등 다양한 변수로 인해 오히려 더 느려질 수 있는 경우도 발생하기 마련이다. 이러한 변수 때문에 A* 알고리즘을 사용하는 것이다. 그리고 A*를 발전시킨 형태가 D*(Dynamic A*)알고리즘인데, 현세대의 대부분의 차량 내비게이션은 이를 활용한다고 보면 된다.
              
  
   
