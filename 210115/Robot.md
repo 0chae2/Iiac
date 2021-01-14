@@ -61,8 +61,8 @@ tion requirements for domestic robots. Safety Science, 50 (9), 1888–1897 . : �
 
 ##### (2) Human detection
 ##### (3) Action recognition
-    
-    
+ 
+-------------------------------------
     
 ### Robot navigation in human populated environments
 #### (1) planning
@@ -89,9 +89,9 @@ tion requirements for domestic robots. Safety Science, 50 (9), 1888–1897 . : �
   - [RRT*](https://blog.naver.com/pasus/221985468898)
   - [video](https://www.youtube.com/watch?v=Ao7p_xiUu4s)
   - 자율차, 로봇, 무인항공기, 우주탐사 등과 같은 분야에서 사용
-  - 샘플링 기반 경로계획법 : 형상공간을 격자(grid)로 분활하지 않고, 랜덤하게 샘플점을 여러개 생성하여 점점이 공간을 탐색하여 경로를 찾는 방법
-                        격자생성방법으로 탐색이 불가능한 고차원(high dimension) 공간에서 유리함 
-                        
+  - 샘플링 기반 경로계획법 : 형상공간을 격자(grid)로 분활하지 않고, 랜덤하게 샘플점을 여러개 생성하여 점점이 공간을 탐색하여 경로를 찾는 방법   격자생성방법으로 탐색이 불가능한 고차원(high dimension) 공간에서 유리함 
+
+
 #### [DTW](https://medium.com/@Aaron__Kim/dynamic-time-warping-%EB%8F%99%EC%A0%81-%EC%8B%9C%EA%B0%84-%EC%9B%8C%ED%95%91-ac80777f49a)
    - 시계열 데이터 간 비교를 위한 최적의 index 매칭을 추정하는 알고리즘 
    - 그래픽, 비디오, 오디오 분야에서 자주 사용 의료 보행의 유사성, 생체 신호 분석 >> 자동음성 인식기술 분야에서 가장 두각을 나타냄
@@ -106,6 +106,7 @@ tion requirements for domestic robots. Safety Science, 50 (9), 1888–1897 . : �
       - 장) 서로 다른 길이의 시계열 유사도 분석 가능
             GPS 데이터 등 다차원 시계열 데이터 분석가능
       - 단) 알고리즘 구현 어렵고 연산량 많음
+      
 ```python
 from scipy.spatial.distance import euclidean
 A = [1, 3, 5, 7, 6, 8, 9, 10, 8, 7]
@@ -138,8 +139,10 @@ distance, path = fastdtw(x, y, dist=euclidean)
 print(distance)
 ## 2.828327,...
 ```
+
 #### [CAO](https://medium.com/@Aaron__Kim/dynamic-time-warping-%EB%8F%99%EC%A0%81-%EC%8B%9C%EA%B0%84-%EC%9B%8C%ED%95%91-ac80777f49a)
 - Cognitive Adaptive Optimization
+
 #### [HRI]
 - human-robot interaction
 - Dynamic Bayesian Network (DBN)
@@ -164,8 +167,8 @@ print(distance)
  - 모션 추정
  
  ##### [RANSAC_random sample consensus](https://darkpgmr.tistory.com/61?category=460965)
- [video](https://www.youtube.com/watch?v=Cu1f6vpEilg)
- [구현](http://blog.daum.net/pg365/category/RANSAC)
+ * [video](https://www.youtube.com/watch?v=Cu1f6vpEilg)
+ * [구현](http://blog.daum.net/pg365/category/RANSAC)
  - 포물선을 근사시키는?
  - 최소자승법은 residual^2을 최소화하도록 모델을 찾지만 RANSAC은 컨센서스가 최대인, 즉 가장 많은 수의 데이터들로부터 지지를 받는 모델을 선택하는 방법 > 무엇을 기준으로 모델의 파라미터를 찾는가의 차이임
  
@@ -178,9 +181,9 @@ print(distance)
   - Iterative Closest Point 는 컴퓨터 그래픽스에서 주로 사용되는 것으로 어떠한 모델에 대해 측정한 데이터가 있을 때, 이 측정 데이터를 모델에 매칭하기 위해, 스케일 변환, 회전, 이동을 계산하는 방법에 관한 것
   - 기존의 데이터셋에 현재 데이터를 Registration 시키는 방법, 각 데이터들이 가장 가까운 점을 이용하여 연관성을 찾고 그에 맞게 현재데이터를 이동 및 회전을 시켜 기존 데이터셋에 추가하는 방법
   - Robot : 현 레이저스캔데이터를 기존 맵에 Registration 할 때 사용, odometry 측정 값 활용하여 현재 데이터가 모델에 대해 얼마나 이동, 회전 되었는지 알 수 있지만, odometry 값에도 오차가 존재하기 때문에 ICP를 통해 보정해서 Registration함
-      * ICP Algorithm
-      1) sample points p~i
-      2) find closest point q~i
+  - *ICP Algorithm
+    1) sample points p ~i~
+    2) find closest point q ~i~
       
  ##### topological graph
  ##### [ontology](https://ko.wikipedia.org/wiki/%EC%98%A8%ED%86%A8%EB%A1%9C%EC%A7%80)
