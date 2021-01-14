@@ -54,7 +54,7 @@ tion requirements for domestic robots. Safety Science, 50 (9), 1888–1897 . : �
 - 소셜 맵을 구축하기위한 첫 번째 단계는 로봇이 관리하는 동안 로봇의 환경을 정확하게 모델링하는 것이므로 메트릭 맵이 직접 요구됩니다. 미터법지도의 구성은이 백서의 목표를 벗어 났지만,이 논문은 여기에 거주자와 내비게이션 간의 차이점을 강조하는 채택 된 방법에 대한 세부 정보를 제공하고, 무인 환경을 제오갛ㅂ니다. 
 - RGB-D bashed > 3D metric map 환경을 만드는 것에 따르면 by Learning spatially semantic representations for cognitive robot navigation:: Kostavelis & Gasteratos
 1) SIFT feature detect : 연속된 RGB frame사이에 이미지를 매치해서 추출
-2) 획득한 각각의 point cloud 값을 3D 점에 일치시킵니다. 강체이동에 대해 SVD와 최적화 문제를 해결합니다. point cloud에서 RANSAC 알고리즘을 사용하여 평면을 감지하고 반복적으로 ICP를 통해 이를 등록함으로 로봇모션을 대략적으로 추정합니다.
+2) 획득한 각각의 point cloud 값을 3D 점에 일치시킵니다. 강체이동에 대해 SVD와 최적화 문제를 해결합니다. point cloud에서 RANSAC 알고리즘을 사용하여 평면을 감지하고 반복적으로 [ICP](#icp)를 통해 이를 등록함으로 로봇모션을 대략적으로 추정합니다.
 3) 로봇포즈 초기 추정치는 로봇이 관찰한 point cloud set에 적용되어 탐색된 환경의 일관된 3D matric map 구성
 4) 특별한 거리? Tg 그래프로 각 노드로 추가된다 >> visual odmetry
 5) t^t+1~R~svd~
@@ -165,13 +165,23 @@ print(distance)
  
  ##### [RANSAC_random sample consensus](https://darkpgmr.tistory.com/61?category=460965)
  [video](https://www.youtube.com/watch?v=Cu1f6vpEilg)
+ [구현](http://blog.daum.net/pg365/category/RANSAC)
  - 포물선을 근사시키는?
  - 최소자승법은 residual^2을 최소화하도록 모델을 찾지만 RANSAC은 컨센서스가 최대인, 즉 가장 많은 수의 데이터들로부터 지지를 받는 모델을 선택하는 방법 > 무엇을 기준으로 모델의 파라미터를 찾는가의 차이임
  
  
  ##### [SVD](https://darkpgmr.tistory.com/106)
- ##### [ICP(interative closest point)](https://www.youtube.com/watch?v=djnd502836w)
- 
+   - 특잇값 분해
+   
+ ##### [ICP](http://blog.daum.net/pg365/141)
+  - [video](https://www.youtube.com/watch?v=djnd502836w)
+  - Iterative Closest Point 는 컴퓨터 그래픽스에서 주로 사용되는 것으로 어떠한 모델에 대해 측정한 데이터가 있을 때, 이 측정 데이터를 모델에 매칭하기 위해, 스케일 변환, 회전, 이동을 계산하는 방법에 관한 것
+  - 기존의 데이터셋에 현재 데이터를 Registration 시키는 방법, 각 데이터들이 가장 가까운 점을 이용하여 연관성을 찾고 그에 맞게 현재데이터를 이동 및 회전을 시켜 기존 데이터셋에 추가하는 방법
+  - Robot : 현 레이저스캔데이터를 기존 맵에 Registration 할 때 사용, odometry 측정 값 활용하여 현재 데이터가 모델에 대해 얼마나 이동, 회전 되었는지 알 수 있지만, odometry 값에도 오차가 존재하기 때문에 ICP를 통해 보정해서 Registration함
+      * ICP Algorithm
+      1) sample points p~i
+      2) find closest point q~i
+      
  ##### topological graph
  ##### [ontology](https://ko.wikipedia.org/wiki/%EC%98%A8%ED%86%A8%EB%A1%9C%EC%A7%80)
  - 개체 간의 관계를 나타낸 것!
@@ -260,6 +270,7 @@ print(distance)
   - [OpenCV Tutorial](https://pysource.com/2018/03/16/image-pyramids-blending-and-reconstruction-opencv-3-4-with-python-3-tutorial-24/)
   - [Markdown문법](https://velog.io/@yuuuye/velog-%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4MarkDown-%EC%9E%91%EC%84%B1%EB%B2%95)
   - [Markdown문법2](https://steemit.com/kr/@nand/markdown)
+  - [kitech](http://blog.daum.net/pg365/)
  ```
    인간이 거주하는 환경에 로봇 통합 그들이 할 수있는 방법론의 확립을 강요 사람들 사이에서 안전하고 적절하며 정상적인 방법으로 순항합니다. 이것은 안전한 항해의 개념에 대한 더 넓은 해석을 얻기위한 연구 측면에서 새로운 도전을 제기합니다. 확립 된 안전을 넘어 인간-로봇 공존 촉진 측정(Mitka, Gasteratos, Kyriakoulis, & Mouroutsos, 2012). 의 위에 모바일 로봇 공학, 매핑은 로봇에게 의미가 있습니다. 모바일 로봇 공학에서 매핑은 로봇이 주변에 대한 의미있는 설명을 구성하여 높은 수준의 목표를 달성 할 수있는 능력을 부여합니다. 새로운 주제 소셜 매핑은 인간의 존재와 활동이 알려지지 않은 복잡한 환경에서 로봇의 기동을 다룹니다. 로봇은 적절한 방식으로 모델링해야합니다. 운영 행동을 인간의 가산 성과 연관시키고 따라서 개인의 편의를 고려하여 탐색 전략을 조정하십시오. 따라서 공간 관리는 인간과 상호 작용할 때의 반응은 이해하고 모델링 할 수 있습니다. 상당한 연구가 공식화하기 위해 사회 과학 분야에서 수행 개인의 행동과 공간에서의 위치가 상호 작용의 질에 미치는 영향을 추정합니다. 문화 인류 학자 에드워드 T. Hall은 proxemics (Hall, 1969)라는 용어를 만들어 문화에 의해 형성되는 생리적 영향이 구역을 지정 함을 제안합니다. 
 근접 거리의.이 작업의 대부분은 Argyle (2013)에 요약되어 있으며 친밀 성 평형 모델 (Argyle Dean, 1965), 근접 행동과 상호 시선 사이의 상호 작용을 설명합니다. 요컨대, 그들이 접근했을 때 과도하게 가까운 사람들은 본능적으로 덜 편안한 자세를 취합니다. 또한 개인은 일상적인 대화를 수행 할 수있는 특정 공간을 주장하며 참가자 만 액세스 할 수 있습니다. 이 공간은 다른 사람들이 높이 평가하지만 위반은 불편 함을 유발한다 (Hall, 1969). 근접 이론에 따르면, 사람 주변의 영역은 네 가지 기본 영역, 즉 친밀한 영역, 개인 영역, 사회적 영역, 공개 된 것. 첫 번째 영역은 반경 0.45m의 원반이며 속삭임과 같은 신체 접촉과 관련된 동작에 해당합니다. 두 번째는 내부 및 외부 반경이 0.45 인 원형 링입니다. 및 1.2m, 각각 친척과의 상호 작용 또는 혼잡 한 상황에서뿐만 아니라 친구. 세 번째 원형 구역 반경이 [1.2-3.5] m 범위 인 경우 거리를 예를 들어 쇼핑이나 박물관에서 공공. 마지막 영역 반경이 3.5m 이상이면 상호 작용이 없음을 나타냅니다. 다카야마와 판토 파루 (2009)의 작업을 바탕으로 모바일 로봇과 인간 사이에 동일한 근접 행동이 적용된다고 가정합니다. 따라서 소셜 매핑은 로봇의 소셜 인텔리전스 구현을 연구합니다. 
