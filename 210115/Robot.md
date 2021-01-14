@@ -63,6 +63,7 @@ tion requirements for domestic robots. Safety Science, 50 (9), 1888–1897 . : �
 ##### (2) [Human detection](https://darkpgmr.tistory.com/53)
 - 보행자 검출 문제의 좋은 [해결책](https://link.springer.com/article/10.1007/s11263-005-6644-8)이라고 생각하지만 빠른 검출을 하려고 하면 비싼 컴퓨터 연산 비용 발생
 - [Dollar detector](https://www.researchgate.net/publication/221259170_The_Fastest_Pedestrian_Detector_in_the_West) 사용함 : Faster > [12년도](https://pubmed.ncbi.nlm.nih.gov/21808091/) 논문에는 Pedestrain detection:An evaluation of the state of the art 성능평가함
+![Dollar 2012 Pedestrian detection: an evaluation of the state of the art]()(reference)
 
 ##### (3) Action recognition
  
@@ -213,7 +214,7 @@ print(distance)
    4) conceptualization : 온톨로지는 표현하고자 하는 대상 세계의 개념들을 특정 모델로 추상화해야 합니다.
    5) domain : 온톨로지는 표현하고자하는 특정 영역이 존제합니다. 다른 영역의 객체까지는 표현하지 못합니다. 
    [출처](https://cholol.tistory.com/97)
-   [https://lans.tistory.com/1062)
+   [https://lans.tistory.com/1062]
  
  #### [SIFT](https://ballentain.tistory.com/47)
  1) [Scale space](https://darkpgmr.tistory.com/137)<br>
