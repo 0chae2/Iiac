@@ -60,7 +60,10 @@ tion requirements for domestic robots. Safety Science, 50 (9), 1888–1897 . : �
    4) 특별한 거리? Tg 그래프로 각 노드로 추가된다 >> visual odmetry
    5) t^t+1~R~svd~
 
-##### (2) Human detection
+##### (2) [Human detection](https://darkpgmr.tistory.com/53)
+- 보행자 검출 문제의 좋은 [해결책](https://link.springer.com/article/10.1007/s11263-005-6644-8)이라고 생각하지만 빠른 검출을 하려고 하면 비싼 컴퓨터 연산 비용 발생
+- [Dollar detector](https://www.researchgate.net/publication/221259170_The_Fastest_Pedestrian_Detector_in_the_West) 사용함 : Faster > [12년도](https://pubmed.ncbi.nlm.nih.gov/21808091/) 논문에는 Pedestrain detection:An evaluation of the state of the art 성능평가함
+
 ##### (3) Action recognition
  
 -------------------------------------
@@ -156,7 +159,7 @@ print(distance)
 #### [HTM](https://enginius.tistory.com/236)
   - "Hierarchical Temporal Memory (HTM)은 neocortex의 structural and algorithmic properties를 모방하고자 하는 machine learning 기술이다. neocortex는 영장류의 뇌의 지능적 생각의 중심지이다. High level vision, hearing, touch, movement, language, and planning은 모두 neocortex에서 수행된다. 이러한 수많은 cognitive function을 보고 당신은 아마 각각 specialized neural algorithm을 구현하고 할 수 있을 것이다. 하지만 그렇지 않다. neocortex는 uniform pattern of neural circuitry를 보인다. 이러한 biological evidence는 neocortex가 여러 다른 intelligence function을 가질 수 있는 동일한 알고리즘으로 구현되었음을 알 수 있다." 
   
- ##### [LSM(Least Squared Method)](https://darkpgmr.tistory.com/56)
+ #### [LSM(Least Squared Method)](https://darkpgmr.tistory.com/56)
  - 어떤 모델의 파라미터를 구하는 한 방법으로서, 데이터와의 residual^2의 합 또는 평균을 최소화하도록 모델의 파라미터를 구하는 방법
  - residual = 추정오차, 근사오차, 잔차를 뜻함
  1) 대수적 방법 : 행렬을 활요하는 것
@@ -168,17 +171,17 @@ print(distance)
  - 원, 타원 근사
  - 모션 추정
  
- ##### [RANSAC_random sample consensus](https://darkpgmr.tistory.com/61?category=460965)
+ #### [RANSAC_random sample consensus](https://darkpgmr.tistory.com/61?category=460965)
  * [video](https://www.youtube.com/watch?v=Cu1f6vpEilg)
  * [구현](http://blog.daum.net/pg365/category/RANSAC)
  - 포물선을 근사시키는?
  - 최소자승법은 residual^2을 최소화하도록 모델을 찾지만 RANSAC은 컨센서스가 최대인, 즉 가장 많은 수의 데이터들로부터 지지를 받는 모델을 선택하는 방법 > 무엇을 기준으로 모델의 파라미터를 찾는가의 차이임
  
  
- ##### [SVD](https://darkpgmr.tistory.com/106)
+ #### [SVD](https://darkpgmr.tistory.com/106)
    - 특잇값 분해
    
- ##### [ICP](http://blog.daum.net/pg365/141)
+ #### [ICP](http://blog.daum.net/pg365/141)
   - [[video]](https://www.youtube.com/watch?v=djnd502836w)
   - Iterative Closest Point 는 컴퓨터 그래픽스에서 주로 사용되는 것으로 어떠한 모델에 대해 측정한 데이터가 있을 때, 이 측정 데이터를 모델에 매칭하기 위해, 스케일 변환, 회전, 이동을 계산하는 방법에 관한 것
   - 기존의 데이터셋에 현재 데이터를 Registration 시키는 방법, 각 데이터들이 가장 가까운 점을 이용하여 연관성을 찾고 그에 맞게 현재데이터를 이동 및 회전을 시켜 기존 데이터셋에 추가하는 방법
@@ -196,8 +199,8 @@ print(distance)
     3) Weighting
     4) Rejecting
     
- ##### topological graph
- ##### [ontology](https://ko.wikipedia.org/wiki/%EC%98%A8%ED%86%A8%EB%A1%9C%EC%A7%80)
+ #### topological graph
+ #### [ontology](https://ko.wikipedia.org/wiki/%EC%98%A8%ED%86%A8%EB%A1%9C%EC%A7%80)
  - 개체 간의 관계를 나타낸 것!
  - 비정형 데이터를 표현하는 방법 중 하나
  - 철학적 "사물의 기본적인 범주나 세상을 구성하는 구성요소들을 상징하는 일반적인 개념을 다루는 학문"
@@ -212,7 +215,7 @@ print(distance)
    [출처](https://cholol.tistory.com/97)
    [https://lans.tistory.com/1062)
  
- ##### [SIFT](https://ballentain.tistory.com/47)
+ ####+ [SIFT](https://ballentain.tistory.com/47)
  
  
   
