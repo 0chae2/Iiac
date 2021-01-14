@@ -215,8 +215,13 @@ print(distance)
    [출처](https://cholol.tistory.com/97)
    [https://lans.tistory.com/1062)
  
- ####+ [SIFT](https://ballentain.tistory.com/47)
- 
+ #### [SIFT](https://ballentain.tistory.com/47)
+ 1) [Scale space](https://darkpgmr.tistory.com/137)
+   (1) scale 이 크다! or 작다!
+      - 스케일이 크다는 것 : 어떤 사물을 넓은 시야에서 본다
+         ex) 이미지 피라미드에서 축소된 이미지들은 원본 이미지에 비해 스케일이 크다!
+             즉, 이미지 축소 --> scale 반비례로 큰 값을 가짐 (축소 : 숲, 확대: 나뭇잎)
+             
  
   
   
