@@ -27,6 +27,12 @@
 - [Extended Social Force Model(ESFM)](#ESFM)
 - [Markov Chain Monte Carlo (MCMC)](#MCMC)
 - [Hierarchical Temporal Memory (HTM)](#HTM)
+- 이 페이퍼에서는 소셜매핑기능과 로봇의 나머지 작동을 분리하는 대부분의 연구와는 달리 제안된 작업의 통합과 관련하여 연구한다. 본 연구에서는 로봇의 목표위치에 도달하는 동시에 사회적 상호작용을 하며 이동하는 것을 목표로 한다.
+```
+   Section 2. 제안된 시스템의 모듈과 맵을 추출하는 방법에 대한 설명
+   Section 3. 로봇탐색 메커니즘과 구성요소를 잘 연결하는 방식 설명
+   Section 4. 시스템 평가
+```
 
   - Mitka, E. , Gasteratos, A. , Kyriakoulis, N. , & Mouroutsos, S. G. (2012). Safety certifica-
 tion requirements for domestic robots. Safety Science, 50 (9), 1888–1897 . : 협동로봇 안전측정?
@@ -34,30 +40,25 @@ tion requirements for domestic robots. Safety Science, 50 (9), 1888–1897 . : �
    - Argyle, M. (2013). Bodily communication . Routledge .
    - Argyle, M. , & Dean, J. (1965). Eye-contact, distance and affiliation. Sociometry , 289–304
 
-- 이 페이퍼에서는 소셜매핑기능과 로봇의 나머지 작동을 분리하는 대부분의 연구와는 달리 제안된 작업의 통합과 관련하여 연구한다. 본 연구에서는 로봇의 목표위치에 도달하는 동시에 사회적 상호작용을 하며 이동하는 것을 목표로 한다.
-```
-   Section 2. 제안된 시스템의 모듈과 맵을 추출하는 방법에 대한 설명
-   Section 3. 로봇탐색 메커니즘과 구성요소를 잘 연결하는 방식 설명
-   Section 4. 시스템 평가
-```
+
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### Social mapping
-      - social mapping framework within an existing robot navigationsystems.
-        1) The computation of the metric map of the surroundings offline fashion : 오프라인 지도 만들기?
-        2) The detection of humans within the scene : 현장내 인간 감지
-        3) the recognition of the actions performed by individuals during the operational phase : 작동 단계 동안 개인이 수행한 행동의 인식
-      - 주행 할 수록 metric map이 정확해 진다 따라서 정적 장애물을 모델링하고 생성된 맵은 나중에 robot navigation and localization에 활용될 것이다.
-      - robot navigation 은 이전에 구성된 지도를 사용
-      - 예를 들어 대화하면서 지나가는 두명 사이에 지나갈까 말까 그런것도 판단을 한다 ~~~htm으로~
+- social mapping framework within an existing robot navigationsystems.
+   1) The computation of the metric map of the surroundings offline fashion : 오프라인 지도 만들기?
+   2) The detection of humans within the scene : 현장내 인간 감지
+   3) the recognition of the actions performed by individuals during the operational phase : 작동 단계 동안 개인이 수행한 행동의 인식
+- 주행 할 수록 metric map이 정확해 진다 따라서 정적 장애물을 모델링하고 생성된 맵은 나중에 robot navigation and localization에 활용될 것이다.
+- robot navigation 은 이전에 구성된 지도를 사용
+- 예를 들어 대화하면서 지나가는 두명 사이에 지나갈까 말까 그런것도 판단을 한다 ~~~htm으로~
       
 ##### (1) Metric maps and navigation
 - 소셜 맵을 구축하기위한 첫 번째 단계는 로봇이 관리하는 동안 로봇의 환경을 정확하게 모델링하는 것이므로 메트릭 맵이 직접 요구됩니다. 미터법지도의 구성은이 백서의 목표를 벗어 났지만,이 논문은 여기에 거주자와 내비게이션 간의 차이점을 강조하는 채택 된 방법에 대한 세부 정보를 제공하고, 무인 환경을 제오갛ㅂ니다. 
 - RGB-D bashed > 3D metric map 환경을 만드는 것에 따르면 by Learning spatially semantic representations for cognitive robot navigation:: Kostavelis & Gasteratos
-1) SIFT feature detect : 연속된 RGB frame사이에 이미지를 매치해서 추출
-2) 획득한 각각의 point cloud 값을 3D 점에 일치시킵니다. 강체이동에 대해 SVD와 최적화 문제를 해결합니다. point cloud에서 RANSAC 알고리즘을 사용하여 평면을 감지하고 반복적으로 [ICP](#icp)를 통해 이를 등록함으로 로봇모션을 대략적으로 추정합니다.
-3) 로봇포즈 초기 추정치는 로봇이 관찰한 point cloud set에 적용되어 탐색된 환경의 일관된 3D matric map 구성
-4) 특별한 거리? Tg 그래프로 각 노드로 추가된다 >> visual odmetry
-5) t^t+1~R~svd~
+   1) SIFT feature detect : 연속된 RGB frame사이에 이미지를 매치해서 추출
+   2) 획득한 각각의 point cloud 값을 3D 점에 일치시킵니다. 강체이동에 대해 SVD와 최적화 문제를 해결합니다. point cloud에서 RANSAC 알고리즘을 사용하여 평면을 감지하고 반복적으로 [ICP](#icp)를 통해 이를 등록함으로 로봇모션을 대략적으로 추정합니다.
+   3) 로봇포즈 초기 추정치는 로봇이 관찰한 point cloud set에 적용되어 탐색된 환경의 일관된 3D matric map 구성
+   4) 특별한 거리? Tg 그래프로 각 노드로 추가된다 >> visual odmetry
+   5) t^t+1~R~svd~
 
 ##### (2) Human detection
 ##### (3) Action recognition
@@ -70,7 +71,7 @@ tion requirements for domestic robots. Safety Science, 50 (9), 1888–1897 . : �
 #### (3) System integration
     
     
-    
+-------------------------    
     
 ### Experimental evaluation
   
@@ -82,6 +83,7 @@ tion requirements for domestic robots. Safety Science, 50 (9), 1888–1897 . : �
   
   
   -------------------------------------------------------------------------------------------------
+
 #### 어디에 쓰이는지, 어떤게 개선 된 것인지? 가 중요 한계는 무엇인지?! >> 찾아보면 나오니깐 자세한건 필요할 때 찾아쓰면 되는 것
 
 #### [RRT](https://en.wikipedia.org/wiki/Rapidly-exploring_random_tree)
@@ -151,8 +153,8 @@ print(distance)
 - Hierarchical Temporal Memory (HTM)
 
  
- ##### HTM
-  - "Hierarchical Temporal Memory (HTM)은 neocortex의 structural and algorithmic properties를 모방하고자 하는 machine learning 기술이다. neocortex는 영장류의 뇌의 지능적 생각의 중심지이다. High level vision, hearing, touch, movement, language, and planning은 모두 neocortex에서 수행된다. 이러한 수많은 cognitive function을 보고 당신은 아마 각각 specialized neural algorithm을 구현하고 할 수 있을 것이다. 하지만 그렇지 않다. neocortex는 uniform pattern of neural circuitry를 보인다. 이러한 biological evidence는 neocortex가 여러 다른 intelligence function을 가질 수 있는 동일한 알고리즘으로 구현되었음을 알 수 있다." (https://enginius.tistory.com/236)
+#### [HTM](https://enginius.tistory.com/236)
+  - "Hierarchical Temporal Memory (HTM)은 neocortex의 structural and algorithmic properties를 모방하고자 하는 machine learning 기술이다. neocortex는 영장류의 뇌의 지능적 생각의 중심지이다. High level vision, hearing, touch, movement, language, and planning은 모두 neocortex에서 수행된다. 이러한 수많은 cognitive function을 보고 당신은 아마 각각 specialized neural algorithm을 구현하고 할 수 있을 것이다. 하지만 그렇지 않다. neocortex는 uniform pattern of neural circuitry를 보인다. 이러한 biological evidence는 neocortex가 여러 다른 intelligence function을 가질 수 있는 동일한 알고리즘으로 구현되었음을 알 수 있다." 
   
  ##### [LSM(Least Squared Method)](https://darkpgmr.tistory.com/56)
  - 어떤 모델의 파라미터를 구하는 한 방법으로서, 데이터와의 residual^2의 합 또는 평균을 최소화하도록 모델의 파라미터를 구하는 방법
@@ -161,7 +163,7 @@ print(distance)
  2) 해석적 방법
  3) 비선형 최소자승법 : 뉴턴법/뉴턴-랩슨법
  
- * 활용되어 지는 곳
+ ###### 활용되어 지는 곳
  - 영상의 밝기 보정
  - 원, 타원 근사
  - 모션 추정
@@ -177,14 +179,23 @@ print(distance)
    - 특잇값 분해
    
  ##### [ICP](http://blog.daum.net/pg365/141)
-  - [video](https://www.youtube.com/watch?v=djnd502836w)
+  - [[video]](https://www.youtube.com/watch?v=djnd502836w)
   - Iterative Closest Point 는 컴퓨터 그래픽스에서 주로 사용되는 것으로 어떠한 모델에 대해 측정한 데이터가 있을 때, 이 측정 데이터를 모델에 매칭하기 위해, 스케일 변환, 회전, 이동을 계산하는 방법에 관한 것
   - 기존의 데이터셋에 현재 데이터를 Registration 시키는 방법, 각 데이터들이 가장 가까운 점을 이용하여 연관성을 찾고 그에 맞게 현재데이터를 이동 및 회전을 시켜 기존 데이터셋에 추가하는 방법
   - Robot : 현 레이저스캔데이터를 기존 맵에 Registration 할 때 사용, odometry 측정 값 활용하여 현재 데이터가 모델에 대해 얼마나 이동, 회전 되었는지 알 수 있지만, odometry 값에도 오차가 존재하기 때문에 ICP를 통해 보정해서 Registration함
-  - *ICP Algorithm
-    1) sample points p ~i~
-    2) find closest point q ~i~
-      
+  - ICP Algorithm
+    1) sample points p<sub>i</sub>
+    2) find closest point q<sup>i</sup>
+    3) reject bad pairs (pi,qi)
+    4) find optimal transformation R t
+    5) update scan alignment
+  
+  - [ICP 성능에 영향을 주는 요인](https://m.blog.naver.com/PostView.nhn?blogId=tlaja&logNo=220666876033&proxyReferer=https:%2F%2Fwww.google.com%2F) :: 일반적 속도, 정확성
+    1) Sampling
+    2) Matching
+    3) Weighting
+    4) Rejecting
+    
  ##### topological graph
  ##### [ontology](https://ko.wikipedia.org/wiki/%EC%98%A8%ED%86%A8%EB%A1%9C%EC%A7%80)
  - 개체 간의 관계를 나타낸 것!
