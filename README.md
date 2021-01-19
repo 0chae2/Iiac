@@ -1,5 +1,5 @@
 Deep learning
-1. 딥러닝 공부방](deep-learning-study.tistory.com/category/Python/%ED%8C%8C%EC%9D%B4%EC%8D%AC%20OpenCV%20%EA%B3%B5%EB%B6%80)
+1. [딥러닝 공부방](deep-learning-study.tistory.com/category/Python/%ED%8C%8C%EC%9D%B4%EC%8D%AC%20OpenCV%20%EA%B3%B5%EB%B6%80)
 - Python과 Pytorch여러가지 튜토리얼과 논문 정리 된 곳
 
 
@@ -79,6 +79,8 @@ VINS-mono
  진영님
 ( 링크 참조 : jinyongjeong.github.io/tag/SLAM/)
 
+이상준님 논문들 읽어보면서 따라가보기!!
+https://eowjd0512.github.io/
 
 
 
@@ -86,3 +88,4 @@ VINS-mono
 
 
 
+!!!
