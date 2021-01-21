@@ -92,8 +92,10 @@ https://eowjd0512.github.io/
 - [arxiv top 한주 한달](http://www.arxiv-sanity.com)
 
 
-
-
+## 책
+- 혼자하는 머신러닝 : https://sihan-son.github.io/alone-dl/
+- 밑바닥부터 딥러닝3
+- 핸즈온 머신러닝 
 
 
 !!!
