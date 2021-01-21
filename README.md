@@ -84,6 +84,14 @@ https://eowjd0512.github.io/
 
 
 
+#### 객체탐지 
+- 20 ~ 21 : scaled yolo, deformable detr, sparse rcnn
+
+#### Segmentation
+ 
+- [arxiv top 한주 한달](http://www.arxiv-sanity.com)
+
+
 
 
 
